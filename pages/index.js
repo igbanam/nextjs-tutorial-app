@@ -36,10 +36,7 @@ export default function Home({ allPosts }) {
 
       <main>
         <h1 className="title">
-          Read{' '}
-          <Link href="/posts/first-post">
-            <a>this page!</a>
-          </Link>
+          Other profiles…
         </h1>
 
         <div className="grid">
