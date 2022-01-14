@@ -9,6 +9,7 @@ export default function Post({ post }) {
       {post.id}
       <br />
       {post.date}
+      <div dangerouslySetInnerHTML={{ __html: post.content_html }} />
     </Layout>
   )
 }
@@ -22,7 +23,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const post = getPost(params.id)
+  const post = await getPost(params.id)
   return {
     props: {
       post
